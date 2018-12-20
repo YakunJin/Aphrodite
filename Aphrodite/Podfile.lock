@@ -1,0 +1,24 @@
+PODS:
+  - AOPKit (1.0.1)
+  - QCloudCore (5.4.5)
+  - TACCore (1.0.0):
+    - AOPKit (= 1.0.1)
+    - QCloudCore (= 5.4.5)
+
+DEPENDENCIES:
+  - TACCore
+
+SPEC REPOS:
+  https://git.cloud.tencent.com/qcloud_u/cocopoads-repo:
+    - AOPKit
+    - QCloudCore
+    - TACCore
+
+SPEC CHECKSUMS:
+  AOPKit: be229d578279d42607214f07cb3f68c563c4e3cd
+  QCloudCore: fdba2fdacb45f3e3f867487136ce804053e09414
+  TACCore: a0d0286c860f02c4f364fcf74c7808b81740ef14
+
+PODFILE CHECKSUM: 89d7452d06a12a1b81813a750fab4319b768622e
+
+COCOAPODS: 1.5.3

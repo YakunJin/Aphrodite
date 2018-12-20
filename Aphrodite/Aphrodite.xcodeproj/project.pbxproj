@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A919CE1C21C4EF7F002A8C85 /* tac_services_configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = A919CE1B21C4EF7F002A8C85 /* tac_services_configurations.plist */; };
 		A9BA6FA821AEB78300058B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA6FA721AEB78300058B9A /* AppDelegate.swift */; };
 		A9BA6FAA21AEB78300058B9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA6FA921AEB78300058B9A /* ViewController.swift */; };
 		A9BA6FAD21AEB78300058B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BA6FAB21AEB78300058B9A /* Main.storyboard */; };
 		A9BA6FB021AEB78300058B9A /* Aphrodite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9BA6FAE21AEB78300058B9A /* Aphrodite.xcdatamodeld */; };
 		A9BA6FB221AEB78500058B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9BA6FB121AEB78500058B9A /* Assets.xcassets */; };
 		A9BA6FB521AEB78500058B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BA6FB321AEB78500058B9A /* LaunchScreen.storyboard */; };
+		ACA2ACE22AC29E0ADAB815AC /* Pods_Aphrodite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E0FEBE29869D0639BD3DCD /* Pods_Aphrodite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06E0FEBE29869D0639BD3DCD /* Pods_Aphrodite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aphrodite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		439807319E496ACFFE61925B /* Pods-Aphrodite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphrodite.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aphrodite/Pods-Aphrodite.release.xcconfig"; sourceTree = "<group>"; };
+		A4E1565915F6B47368D046CA /* Pods-Aphrodite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aphrodite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aphrodite/Pods-Aphrodite.debug.xcconfig"; sourceTree = "<group>"; };
+		A919CE1B21C4EF7F002A8C85 /* tac_services_configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tac_services_configurations.plist; sourceTree = "<group>"; };
 		A9BA6FA421AEB78300058B9A /* Aphrodite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aphrodite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BA6FA721AEB78300058B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9BA6FA921AEB78300058B9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA2ACE22AC29E0ADAB815AC /* Pods_Aphrodite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28403BC489D5B8D2979E2A59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06E0FEBE29869D0639BD3DCD /* Pods_Aphrodite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DCCA1A6800D698BB4E8F026 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4E1565915F6B47368D046CA /* Pods-Aphrodite.debug.xcconfig */,
+				439807319E496ACFFE61925B /* Pods-Aphrodite.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A9BA6F9B21AEB78200058B9A = {
 			isa = PBXGroup;
 			children = (
 				A9BA6FA621AEB78300058B9A /* Aphrodite */,
 				A9BA6FA521AEB78300058B9A /* Products */,
+				6DCCA1A6800D698BB4E8F026 /* Pods */,
+				28403BC489D5B8D2979E2A59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +88,7 @@
 				A9BA6FB121AEB78500058B9A /* Assets.xcassets */,
 				A9BA6FB321AEB78500058B9A /* LaunchScreen.storyboard */,
 				A9BA6FB621AEB78500058B9A /* Info.plist */,
+				A919CE1B21C4EF7F002A8C85 /* tac_services_configurations.plist */,
 				A9BA6FAE21AEB78300058B9A /* Aphrodite.xcdatamodeld */,
 			);
 			path = Aphrodite;
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9BA6FB921AEB78500058B9A /* Build configuration list for PBXNativeTarget "Aphrodite" */;
 			buildPhases = (
+				E4AF946685600F3646CC56F2 /* [CP] Check Pods Manifest.lock */,
+				A919CE1D21C4F020002A8C85 /* TAC Run Before */,
 				A9BA6FA021AEB78200058B9A /* Sources */,
 				A9BA6FA121AEB78200058B9A /* Frameworks */,
 				A9BA6FA221AEB78200058B9A /* Resources */,
+				A919CE1E21C4F091002A8C85 /* TAC Run After */,
 			);
 			buildRules = (
 			);
@@ -125,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A919CE1C21C4EF7F002A8C85 /* tac_services_configurations.plist in Resources */,
 				A9BA6FB521AEB78500058B9A /* LaunchScreen.storyboard in Resources */,
 				A9BA6FB221AEB78500058B9A /* Assets.xcassets in Resources */,
 				A9BA6FAD21AEB78300058B9A /* Main.storyboard in Resources */,
@@ -132,6 +163,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A919CE1D21C4F020002A8C85 /* TAC Run Before */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "TAC Run Before";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/TACCore/Scripts/tac.run.all.before.sh\n";
+		};
+		A919CE1E21C4F091002A8C85 /* TAC Run After */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "TAC Run After";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/TACCore/Scripts/tac.run.all.after.sh\n";
+		};
+		E4AF946685600F3646CC56F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aphrodite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9BA6FA021AEB78200058B9A /* Sources */ = {
@@ -284,6 +376,7 @@
 		};
 		A9BA6FBA21AEB78500058B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E1565915F6B47368D046CA /* Pods-Aphrodite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +395,7 @@
 		};
 		A9BA6FBB21AEB78500058B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 439807319E496ACFFE61925B /* Pods-Aphrodite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

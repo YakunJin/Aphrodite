@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15AFA06D873EA52D3A1D0F76815BDB46 /* Pods-Aphrodite-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F583CDC8F03CB36AD791E4FE5624366 /* Pods-Aphrodite-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C25D3CDD9FDEB54C040654084A1B6CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		B6573826F40A76E71A6BE655FD46C0D1 /* Pods-Aphrodite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B446AF912E579481F0F6C5510E1F7533 /* Pods-Aphrodite-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2066E96BEF5E752F6ADFD3EB41D2C296 /* TACCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TACCore.framework; path = ios/TACCore.embeddedframework/TACCore.framework; sourceTree = "<group>"; };
+		2FD565E86B70F9CB16756D78DCD1FB4F /* Pods-Aphrodite-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Aphrodite-resources.sh"; sourceTree = "<group>"; };
+		3F19992076D6B5C8CCFD8F3168566D8A /* Pods-Aphrodite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Aphrodite.release.xcconfig"; sourceTree = "<group>"; };
+		4FA72D441A10B987822A393D640314C5 /* Pods-Aphrodite-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Aphrodite-acknowledgements.plist"; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5F583CDC8F03CB36AD791E4FE5624366 /* Pods-Aphrodite-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Aphrodite-umbrella.h"; sourceTree = "<group>"; };
+		6B8A1FBFB6505D49693A293923055D9A /* Pods-Aphrodite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Aphrodite.debug.xcconfig"; sourceTree = "<group>"; };
+		6F94464267DBCAB175DCD8CD86932B4E /* Pods-Aphrodite.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Aphrodite.modulemap"; sourceTree = "<group>"; };
+		78F8A52E207A013028C263EEFA61973E /* QCloudCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QCloudCore.framework; path = ios/QCloudCore.embeddedframework/QCloudCore.framework; sourceTree = "<group>"; };
+		7CC99A1B0D6188690C51005D063F9C84 /* libadtracker.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libadtracker.a; path = Pod/MTA/plugin/adtracker/libadtracker.a; sourceTree = "<group>"; };
+		869ECFDC997A11BC8382EF4AA29F267E /* libMTAHybrid.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libMTAHybrid.a; path = Pod/MTA/plugin/MTAHybrid/libMTAHybrid.a; sourceTree = "<group>"; };
+		88DD2CDC52733B067036E12295DC759F /* Pods-Aphrodite-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Aphrodite-frameworks.sh"; sourceTree = "<group>"; };
+		9093C933237E0A9B9FCA790587DCF281 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B446AF912E579481F0F6C5510E1F7533 /* Pods-Aphrodite-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Aphrodite-dummy.m"; sourceTree = "<group>"; };
+		B5D763E9BDDA786D763ADBA01633F7F0 /* AOPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AOPKit.framework; path = ios/AOPKit.embeddedframework/AOPKit.framework; sourceTree = "<group>"; };
+		BA1C8B9556DCF97D25698AE82E1A4CBE /* libmtasdk.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libmtasdk.a; path = Pod/MTA/libmtasdk.a; sourceTree = "<group>"; };
+		D0C378DA27D9F67714982EF731324507 /* Pods-Aphrodite-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Aphrodite-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E559219481652F5E541BA946CCC0CD3E /* Pods_Aphrodite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Aphrodite.framework; path = "Pods-Aphrodite.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B7368078AFD3E2FEEE0D9131EDBCF37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C25D3CDD9FDEB54C040654084A1B6CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B9550F8FC04DA1589AC652C00952F65 /* AOPKit */ = {
+			isa = PBXGroup;
+			children = (
+				CCE4219C76644005DF035DA404D430ED /* Frameworks */,
+			);
+			name = AOPKit;
+			path = AOPKit;
+			sourceTree = "<group>";
+		};
+		38EEE4D18F7835BD564618C084D2C6CA /* Pods-Aphrodite */ = {
+			isa = PBXGroup;
+			children = (
+				9093C933237E0A9B9FCA790587DCF281 /* Info.plist */,
+				6F94464267DBCAB175DCD8CD86932B4E /* Pods-Aphrodite.modulemap */,
+				D0C378DA27D9F67714982EF731324507 /* Pods-Aphrodite-acknowledgements.markdown */,
+				4FA72D441A10B987822A393D640314C5 /* Pods-Aphrodite-acknowledgements.plist */,
+				B446AF912E579481F0F6C5510E1F7533 /* Pods-Aphrodite-dummy.m */,
+				88DD2CDC52733B067036E12295DC759F /* Pods-Aphrodite-frameworks.sh */,
+				2FD565E86B70F9CB16756D78DCD1FB4F /* Pods-Aphrodite-resources.sh */,
+				5F583CDC8F03CB36AD791E4FE5624366 /* Pods-Aphrodite-umbrella.h */,
+				6B8A1FBFB6505D49693A293923055D9A /* Pods-Aphrodite.debug.xcconfig */,
+				3F19992076D6B5C8CCFD8F3168566D8A /* Pods-Aphrodite.release.xcconfig */,
+			);
+			name = "Pods-Aphrodite";
+			path = "Target Support Files/Pods-Aphrodite";
+			sourceTree = "<group>";
+		};
+		42D0D3183CFB3E6CE6965C801C2E4CC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B9550F8FC04DA1589AC652C00952F65 /* AOPKit */,
+				629C8E0CC931ECF7AFEF614C767E30A2 /* QCloudCore */,
+				A5711793428E305BFDB5FD63A5230B62 /* TACCore */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5315FC3ECB6697E142FEBD188045287F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78F8A52E207A013028C263EEFA61973E /* QCloudCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55EB86A516BA0613AB1E532E3405E11F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E559219481652F5E541BA946CCC0CD3E /* Pods_Aphrodite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		629C8E0CC931ECF7AFEF614C767E30A2 /* QCloudCore */ = {
+			isa = PBXGroup;
+			children = (
+				5315FC3ECB6697E142FEBD188045287F /* Frameworks */,
+			);
+			name = QCloudCore;
+			path = QCloudCore;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				42D0D3183CFB3E6CE6965C801C2E4CC5 /* Pods */,
+				55EB86A516BA0613AB1E532E3405E11F /* Products */,
+				EC33F9A90747814DD7B209686801C568 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		95DDB8542BD89FD58ABAC01BD1ACDEAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CC99A1B0D6188690C51005D063F9C84 /* libadtracker.a */,
+				869ECFDC997A11BC8382EF4AA29F267E /* libMTAHybrid.a */,
+				BA1C8B9556DCF97D25698AE82E1A4CBE /* libmtasdk.a */,
+				2066E96BEF5E752F6ADFD3EB41D2C296 /* TACCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5711793428E305BFDB5FD63A5230B62 /* TACCore */ = {
+			isa = PBXGroup;
+			children = (
+				95DDB8542BD89FD58ABAC01BD1ACDEAF /* Frameworks */,
+			);
+			name = TACCore;
+			path = TACCore;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCE4219C76644005DF035DA404D430ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5D763E9BDDA786D763ADBA01633F7F0 /* AOPKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC33F9A90747814DD7B209686801C568 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				38EEE4D18F7835BD564618C084D2C6CA /* Pods-Aphrodite */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E18416303C6865E40C0A716FDBB03152 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15AFA06D873EA52D3A1D0F76815BDB46 /* Pods-Aphrodite-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D7A1B98308A9025B9872DF799971BF80 /* Pods-Aphrodite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93943684E9EDB475B114393B9D3D4B33 /* Build configuration list for PBXNativeTarget "Pods-Aphrodite" */;
+			buildPhases = (
+				E18416303C6865E40C0A716FDBB03152 /* Headers */,
+				1E5E910A911C2E3F8DF5F8553317435D /* Sources */,
+				6B7368078AFD3E2FEEE0D9131EDBCF37 /* Frameworks */,
+				89B83B68BF0C3A544854E62703BB3442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Aphrodite";
+			productName = "Pods-Aphrodite";
+			productReference = E559219481652F5E541BA946CCC0CD3E /* Pods_Aphrodite.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 55EB86A516BA0613AB1E532E3405E11F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7A1B98308A9025B9872DF799971BF80 /* Pods-Aphrodite */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89B83B68BF0C3A544854E62703BB3442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E5E910A911C2E3F8DF5F8553317435D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6573826F40A76E71A6BE655FD46C0D1 /* Pods-Aphrodite-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		23214B6348CAC3E01D4515DEBCAB1269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F19992076D6B5C8CCFD8F3168566D8A /* Pods-Aphrodite.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Aphrodite/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Aphrodite/Pods-Aphrodite.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		40B45BB3CF3EE4476259302A7FAAD78F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		5328AAD3E8A0EA4477614BF8CF81195C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B8A1FBFB6505D49693A293923055D9A /* Pods-Aphrodite.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Aphrodite/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Aphrodite/Pods-Aphrodite.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		85ED3013A635C27F8B7FAF51362B108C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85ED3013A635C27F8B7FAF51362B108C /* Debug */,
+				40B45BB3CF3EE4476259302A7FAAD78F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93943684E9EDB475B114393B9D3D4B33 /* Build configuration list for PBXNativeTarget "Pods-Aphrodite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5328AAD3E8A0EA4477614BF8CF81195C /* Debug */,
+				23214B6348CAC3E01D4515DEBCAB1269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

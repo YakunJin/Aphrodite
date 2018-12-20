@@ -1,0 +1,9 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/AOPKit/ios/AOPKit.embeddedframework" "${PODS_ROOT}/QCloudCore/ios/QCloudCore.embeddedframework" "${PODS_ROOT}/TACCore/ios/TACCore.embeddedframework"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/TACCore/Pod/MTA" "${PODS_ROOT}/TACCore/Pod/MTA/plugin/MTAHybrid" "${PODS_ROOT}/TACCore/Pod/MTA/plugin/adtracker"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"MTAHybrid" -l"adtracker" -l"c++" -l"mtasdk" -l"sqlite3" -l"z" -framework "AOPKit" -framework "Accelerate" -framework "CFNetwork" -framework "CoreMedia" -framework "CoreTelephony" -framework "QCloudCore" -framework "Security" -framework "SystemConfiguration" -framework "TACCore" -framework "WebKit"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
