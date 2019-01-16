@@ -1,0 +1,6 @@
+<template name="footer">
+  <view class='footer'>
+    <button class='footer-button'>随便看看</button>
+    <button class='footer-button'>我要做</button>
+  </view>
+</template>
