@@ -1,0 +1,18 @@
+<!--miniprogram/pages/NewRequest/newRequest.wxml-->
+<!-- 上传图片 -->
+<view class="new-request-view">
+  <view wx:if="{{!isUserLogin}}">
+    <button open-type='getUserInfo' bindgetuserinfo="onGotUserInfo">先要登录哦</button>
+  </view>
+
+  <view wx:if="{{isUserLogin}}">
+    <view class="uploader">
+      <view class="uploader-text" bindtap="doUpload">
+        <text>上传图片</text>
+      </view>
+      <view class="uploader-container" wx:if="{{newRequestImageUrl}}">
+        <image class="uploader-image" src="{{newRequestImageUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+      </view>
+    </view>
+  </view>
+</view>

@@ -16,6 +16,11 @@
 
 .footer-button{
   display: inline-block;
-  width: 50%;
+  width: 100%;
   text-align: center;
+}
+
+page {
+  height: 100%;
+  width: 100%;
 }
