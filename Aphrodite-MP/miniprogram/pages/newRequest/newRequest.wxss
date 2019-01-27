@@ -6,3 +6,25 @@
   align-items: center;
   justify-content: center;
 }
+
+.new-request-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.new-request-section {
+  width: 200rpx;
+  background-color: purple;
+  height: 200rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-request-image-section {
+  height: 615rpx;
+  margin-bottom: 50rpx;
+}
