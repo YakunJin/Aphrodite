@@ -1,5 +1,8 @@
 // miniprogram/pages/NewRequest/newRequest.js
 const app = getApp()
+const db = wx.cloud.database()
+const newRequestRepository = db.collection('NewRequest')
+
 Page({
 
   /**
@@ -13,8 +16,9 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
-    isUserLogin: !!app.globalData.openId 
+  onLoad: function(options) {
+    isUserLogin: !!app.globalData.openId
+    this.loadRequestForUser.bind(this)
   },
 
   onGotUserInfo: function(e) {
@@ -24,7 +28,8 @@ Page({
       data: {},
       success: res => {
         console.log('[云函数] [login] user openid: ', res.result.openid)
-        app.globalData.openid = res.result.openid
+        app.globalData.openId = res.result.openid
+        this.loadRequestForUser(res.result.openid);
         // 获取用户信息
         wx.getSetting({
           success: res => {
@@ -32,7 +37,7 @@ Page({
               // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
               wx.getUserInfo({
                 success: res => {
-                  console.log('userInfo ',res.userInfo)
+                  console.log('userInfo ', res.userInfo)
                   this.setData({
                     avatarUrl: res.userInfo.avatarUrl,
                     userInfo: res.userInfo,
@@ -63,54 +68,54 @@ Page({
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * Page event handler function--Called when user drop down
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
 
   // 上传图片
-  doUpload: function () {
+  doUpload: function() {
     // 选择图片
     wx.chooseImage({
       count: 1,
@@ -131,6 +136,7 @@ Page({
             this.setData({
               newRequestImageUrl: filePath,
             })
+            this.createNewRequest(app.globalData.openId, res.fileID, filePath)
           },
           fail: e => {
             console.error('[上传文件] 失败：', e)
@@ -150,4 +156,31 @@ Page({
       }
     })
   },
+
+  createNewRequest: function(openId, imageId, imagePath) {
+    newRequestRepository.add({
+      data: {
+        openId: openId,
+        imageId: imageId,
+        imagePath: imagePath,
+        createdAt: db.serverDate()
+      },
+      success: res => {
+        console.log('Create new request success for user ', openId)
+      }
+    })
+  },
+
+  loadRequestForUser: function(openId) {
+    console.log('load request ', openId)
+    newRequestRepository.where({
+      _openid: openId
+    }).get({
+      success: res => {
+        this.setData({
+          newRequestImageUrl: res.data[0].imagePath
+        })
+      }
+    })
+  }
 })

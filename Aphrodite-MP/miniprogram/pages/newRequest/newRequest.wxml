@@ -7,11 +7,11 @@
 
   <view wx:if="{{isUserLogin}}">
     <view class="uploader">
-      <view class="uploader-text" bindtap="doUpload">
-        <text>上传图片</text>
-      </view>
       <view class="uploader-container" wx:if="{{newRequestImageUrl}}">
         <image class="uploader-image" src="{{newRequestImageUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+      </view>
+      <view class="uploader-text" bindtap="doUpload">
+        <text>上传图片</text>
       </view>
     </view>
   </view>
