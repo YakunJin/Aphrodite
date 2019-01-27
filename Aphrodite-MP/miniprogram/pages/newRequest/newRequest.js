@@ -1,7 +1,6 @@
 // miniprogram/pages/NewRequest/newRequest.js
 const app = getApp()
 const db = wx.cloud.database()
-const newRequestRepository = db.collection('NewRequest')
 
 Page({
 
@@ -127,7 +126,7 @@ Page({
         })
         const filePath = res.tempFilePaths[0]
         // 上传图片
-        const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
+        const cloudPath = 'new-request-image' + app.globalData.openId
         wx.cloud.uploadFile({
           cloudPath,
           filePath,
@@ -158,29 +157,45 @@ Page({
   },
 
   createNewRequest: function(openId, imageId, imagePath) {
-    newRequestRepository.add({
+    wx.cloud.callFunction({
+      name: 'deleteNewRequest',
       data: {
         openId: openId,
-        imageId: imageId,
-        imagePath: imagePath,
-        createdAt: db.serverDate()
       },
       success: res => {
-        console.log('Create new request success for user ', openId)
-      }
+        wx.cloud.callFunction({
+          name: 'createNewRequest',
+          data: {
+            openId: openId,
+            imageId: imageId,
+            imagePath: imagePath
+          },
+          success: res => {
+            console.log('Create new request success for user ', openId)
+          },
+          fail: console.error
+        })
+      },
+      fail: console.error
     })
   },
 
   loadRequestForUser: function(openId) {
-    console.log('load request ', openId)
-    newRequestRepository.where({
-      _openid: openId
-    }).get({
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'loadNewRequest',
+      // 传给云函数的参数
+      data: {
+        openId: openId,
+      },
       success: res => {
-        this.setData({
-          newRequestImageUrl: res.data[0].imagePath
-        })
-      }
+        if (res.result.data.length > 0) {
+          this.setData({
+            newRequestImageUrl: res.result.data[0].imagePath
+          })
+        }
+      },
+      fail: console.error
     })
   }
 })
