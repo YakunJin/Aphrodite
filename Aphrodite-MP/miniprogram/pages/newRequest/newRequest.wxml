@@ -9,6 +9,7 @@
     <view class="new-request-image-section" wx:if="{{newRequestImageUrl}}">
       <image class="uploader-image" src="{{newRequestImageUrl}}" mode="aspectFit" bindtap="previewImg"></image>
     </view>
+    <bidder></bidder>
     <view class="new-request-section" bindtap="doUpload">
       <text>Start</text>
     </view>
