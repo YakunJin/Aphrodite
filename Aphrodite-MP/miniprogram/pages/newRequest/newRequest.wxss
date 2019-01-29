@@ -15,9 +15,12 @@
 }
 
 .new-request-section {
-  width: 200rpx;
+  position: absolute;
+  right: 34rpx;
+  bottom: 50rpx;
+  width: 160rpx;
   background-color: purple;
-  height: 200rpx;
+  height: 160rpx;
   border-radius: 50%;
   display: flex;
   align-items: center;
