@@ -1,2 +1,5 @@
 <!--components/bidder/bidder.wxml-->
-<text>components/bidder/bidder.wxml</text>
+<view class='bidder-container'>
+  <image class="bidder-avatar" src="{{avatar}}" mode="aspectFit"></image>
+  <text>{{name}}</text>
+</view>

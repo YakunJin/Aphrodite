@@ -27,7 +27,10 @@ Page({
       data: {},
       success: res => {
         console.log('[云函数] [login] user openid: ', res.result.openid)
+        console.log('[云函数] [login] user unionid: ', res.result.unionid)
+        console.log('[云函数] [login] user appid: ', res.result.appid)
         app.globalData.openId = res.result.openid
+        app.globalData.unionId = res.result.unionid
         this.loadRequestForUser(res.result.openid);
         // 获取用户信息
         wx.getSetting({
@@ -190,6 +193,7 @@ Page({
       },
       success: res => {
         if (res.result.data.length > 0) {
+          console.log('image path ==== ', res.result.data[0].imagePath)
           this.setData({
             newRequestImageUrl: res.result.data[0].imagePath
           })

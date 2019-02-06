@@ -1,1 +1,11 @@
 /* components/bidder/bidder.wxss */
+.bidder-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.bidder-avatar {
+  height: 100rpx;
+  width: 100rpx;
+}
