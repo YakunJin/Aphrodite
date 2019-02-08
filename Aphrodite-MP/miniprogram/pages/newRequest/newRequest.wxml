@@ -9,7 +9,9 @@
     <view class="new-request-image-section" wx:if="{{newRequestImageUrl}}">
       <image class="uploader-image" src="{{newRequestImageUrl}}" mode="aspectFit" bindtap="previewImg"></image>
     </view>
-    <bidder class="bidder-item" name="Lorem ipsum" avatar=""></bidder>
+    <view class="request-bidders-section" wx:for="{{requestBidders}}" wx:for-index="idx" wx:for-item="requestBidder">
+      <bidder class="bidder-item" name="{{requestBidder.bidderName}}" avatar="{{requestBidder.bidderAvatar}}"></bidder>
+    </view>
     <view class="new-request-section" bindtap="doUpload">
       <text>Start</text>
     </view>

@@ -9,7 +9,8 @@ Page({
    */
   data: {
     isUserLogin: false,
-    newRequestImageUrl: ''
+    newRequestImageUrl: '',
+    requestBidders: [],
   },
 
   /**
@@ -18,6 +19,7 @@ Page({
   onLoad: function(options) {
     isUserLogin: !!app.globalData.openId
     this.loadRequestForUser.bind(this)
+    this.loadRequestBidders.bind(this)
   },
 
   onGotUserInfo: function(e) {
@@ -193,9 +195,29 @@ Page({
       },
       success: res => {
         if (res.result.data.length > 0) {
-          console.log('image path ==== ', res.result.data[0].imagePath)
           this.setData({
             newRequestImageUrl: res.result.data[0].imagePath
+          })
+          this.loadRequestBidders(res.result.data[0]._id)
+        }
+      },
+      fail: console.error
+    })
+  },
+
+  loadRequestBidders: function(requestId) {
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'loadBidderList',
+      // 传给云函数的参数
+      data: {
+        requestId: requestId,
+      },
+      success: res => {
+        console.log("bidders ", res.result.data)
+        if (res.result.data.length > 0) {
+          this.setData({
+            requestBidders: res.result.data
           })
         }
       },
