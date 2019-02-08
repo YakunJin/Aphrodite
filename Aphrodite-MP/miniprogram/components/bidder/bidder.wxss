@@ -1,11 +1,33 @@
 /* components/bidder/bidder.wxss */
+
 .bidder-container {
   display: flex;
   height: 100%;
   width: 100%;
+  align-items: center;
 }
 
 .bidder-avatar {
   height: 100rpx;
   width: 100rpx;
+}
+
+.additonal-section {
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+}
+
+.apply-bid-button {
+  height: 100%;
+  width: 20rpx;
+  float: right;
+  margin-right: 30rpx;
+  border: none;
+}
+
+.apply-bid-icon {
+  height: 100%;
+  width: 57rpx;
+  margin-left: -22rpx;
 }

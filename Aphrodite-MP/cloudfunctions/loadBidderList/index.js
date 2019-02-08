@@ -26,6 +26,7 @@ exports.main = async(event, context) => {
         bidderName: bidderInfo.name,
         bidderAvatar: bidderInfo.avatar,
         bidderReview: bidderInfo.review,
+        price: requestBidder.price,
         isWin: requestBidder.is_win
       }
     }),
