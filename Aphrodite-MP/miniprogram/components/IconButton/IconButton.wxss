@@ -8,13 +8,13 @@
   width: 100%;
   border: none;
   background-color: transparent;
+  top: -88rpx;
+  position: relative;
   opacity: 0;
 }
 
 .button-image {
   height: 100%;
   width: 100%;
-  position: relative;
-  top: -78rpx;
   left: 1rpx;
 }

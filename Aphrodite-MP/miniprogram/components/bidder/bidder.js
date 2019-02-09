@@ -31,6 +31,5 @@ Component({
    * Component methods
    */
   methods: {
-
   }
 })

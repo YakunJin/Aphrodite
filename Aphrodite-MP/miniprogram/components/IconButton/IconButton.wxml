@@ -1,6 +1,5 @@
 <!--components/IconButton/IconButton.wxml-->
 <view class='button-container'>
-  <button class="button" plain='true'>
-  </button>
-  <image class="button-image" src='../../icons/apple.png' mode='aspectFit'></image>
+  <image class="button-image" src='../../icons/apple_grey.png' mode='aspectFit'></image>
+  <button class="button" plain='true' bindtap='onClick'></button>
 </view>

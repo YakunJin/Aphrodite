@@ -18,6 +18,9 @@ Component({
    * Component methods
    */
   methods: {
-
+    onClick() {
+      console.log('button click')
+      this.triggerEvent('onClick')
+    }
   }
 })

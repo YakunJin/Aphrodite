@@ -5,5 +5,5 @@
 </view>
 <view class="additonal-section">
   <text class='price-text'>RMB: {{price}}</text>
-  <icon-button class='apply-bid-button'></icon-button>
+  <icon-button class='apply-bid-button' bind:onClick="onSetWinner"></icon-button>
 </view>

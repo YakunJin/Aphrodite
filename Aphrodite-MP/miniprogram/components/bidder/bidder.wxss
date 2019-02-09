@@ -5,6 +5,7 @@
   height: 100%;
   width: 100%;
   align-items: center;
+  margin-top: 15rpx;
 }
 
 .bidder-avatar {
@@ -15,6 +16,9 @@
 .additonal-section {
   display: block;
   height: 80rpx;
+  margin-top: 15rpx;
+  border-top: 1rpx solid lightgrey;
+  border-bottom: 1rpx solid lightgrey;
   /* align-items: center; */
 }
 
@@ -22,6 +26,7 @@
   float: left;
   margin-top: 15rpx;
 }
+
 .apply-bid-button {
   height: 100%;
   width: 67rpx;
