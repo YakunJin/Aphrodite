@@ -23,6 +23,7 @@ exports.main = async(event, context) => {
       })
       return {
         requestId: requestBidder.request_id,
+        bidderId: requestBidder.bidder_id,
         bidderName: bidderInfo.name,
         bidderAvatar: bidderInfo.avatar,
         bidderReview: bidderInfo.review,
