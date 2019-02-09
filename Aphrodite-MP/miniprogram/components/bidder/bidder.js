@@ -24,12 +24,17 @@ Component({
    * Component initial data
    */
   data: {
-
+    isToggleOn: false
   },
 
   /**
    * Component methods
    */
   methods: {
+    onSetWinner() {
+      this.setData({
+        isToggleOn: !this.properties.isToggleOn
+      })
+    }
   }
 })

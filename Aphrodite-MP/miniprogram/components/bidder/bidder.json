@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "icon-button": "../IconButton/IconButton"
+    "icon-toggle-button": "../IconToggleButton/IconToggleButton"
   }
 }

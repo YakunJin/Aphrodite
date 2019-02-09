@@ -5,5 +5,5 @@
 </view>
 <view class="additonal-section">
   <text class='price-text'>RMB: {{price}}</text>
-  <icon-button class='apply-bid-button' bind:onClick="onSetWinner"></icon-button>
+  <icon-toggle-button class='apply-bid-button' icon-url="../../icons/apple_grey.png" toggle-on-icon-url="../../icons/apple.png" is-toggle-on="{{isToggleOn}}" bind:onClick="onSetWinner"></icon-toggle-button>
 </view>

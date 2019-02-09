@@ -1,10 +1,19 @@
-// components/IconButton/IconButton.js
+// components/IconToggleButton/IconToggleButton.js
 Component({
   /**
    * Component properties
    */
   properties: {
-
+    iconUrl: {
+      type: String,
+    },
+    toggleOnIconUrl: {
+      type: String,
+    },
+    isToggleOn: {
+      type: Boolean,
+      value: false,
+    }
   },
 
   /**
@@ -19,7 +28,6 @@ Component({
    */
   methods: {
     onClick() {
-      console.log('button click')
       this.triggerEvent('onClick')
     }
   }

@@ -1,0 +1,6 @@
+<!--components/IconButton/IconButton.wxml-->
+<view class='button-container'>
+  <image wx:if="{{!isToggleOn}}" class="button-image" src='{{iconUrl}}' mode='aspectFit'></image>
+  <image wx:if="{{isToggleOn}}" class="button-image" src='{{toggleOnIconUrl}}' mode='aspectFit'></image>
+  <button class="button" plain='true' bindtap='onClick'></button>
+</view>

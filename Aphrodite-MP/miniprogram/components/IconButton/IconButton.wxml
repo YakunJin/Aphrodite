@@ -1,5 +1,0 @@
-<!--components/IconButton/IconButton.wxml-->
-<view class='button-container'>
-  <image class="button-image" src='../../icons/apple_grey.png' mode='aspectFit'></image>
-  <button class="button" plain='true' bindtap='onClick'></button>
-</view>
