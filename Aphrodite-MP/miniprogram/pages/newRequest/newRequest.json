@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "bidder": "../../components/bidder/bidder"
+    "bidder": "../../components/bidder/bidder",
+    "icon-button": "../../components/IconButton/IconButton"
   },
   "navigationBarTitleText": "云函数指引"
 }

@@ -13,21 +13,18 @@
 }
 
 .additonal-section {
-  display: flex;
+  display: block;
   height: 80rpx;
-  align-items: center;
+  /* align-items: center; */
 }
 
+.price-text{
+  float: left;
+  margin-top: 15rpx;
+}
 .apply-bid-button {
   height: 100%;
-  width: 20rpx;
+  width: 67rpx;
   float: right;
   margin-right: 30rpx;
-  border: none;
-}
-
-.apply-bid-icon {
-  height: 100%;
-  width: 57rpx;
-  margin-left: -22rpx;
 }

@@ -1,0 +1,6 @@
+<!--components/IconButton/IconButton.wxml-->
+<view class='button-container'>
+  <button class="button" plain='true'>
+  </button>
+  <image class="button-image" src='../../icons/apple.png' mode='aspectFit'></image>
+</view>

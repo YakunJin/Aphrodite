@@ -4,8 +4,6 @@
   <text>{{name}}</text>
 </view>
 <view class="additonal-section">
-  <text>RMB: {{price}}</text>
-  <button class="apply-bid-button" plain='true'>
-    <image class ="apply-bid-icon" src='../../icons/apple.png' mode='aspectFit'></image>
-  </button>
+  <text class='price-text'>RMB: {{price}}</text>
+  <icon-button class='apply-bid-button'></icon-button>
 </view>
