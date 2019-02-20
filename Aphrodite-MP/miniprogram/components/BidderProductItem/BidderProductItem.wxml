@@ -1,0 +1,4 @@
+<!--components/BidderProductItem/BidderProductItem.wxml-->
+<view class="bidder-product-image" wx:if="{{!!imageUrl}}">
+  <image class="uploader-image" src="{{imageUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+</view>

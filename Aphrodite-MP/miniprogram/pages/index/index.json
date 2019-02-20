@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "bidder-product-item": "../../components/BidderProductItem/BidderProductItem"
+  }
 }
