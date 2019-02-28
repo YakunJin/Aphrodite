@@ -42,6 +42,7 @@ Page({
                 matchBidderProduct.imageUrl = file.tempFileURL
               })
 
+              console.log('load bidder products', res.result.data);
               this.setData({
                 bidderProducts: res.result.data
               })
@@ -50,6 +51,49 @@ Page({
         }
       },
       fail: console.error
+    })
+  },
+
+  // 上传图片
+  doUpload: function () {
+    // 选择图片
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['compressed'],
+      sourceType: ['album', 'camera'],
+      success: res => {
+        wx.showLoading({
+          title: '上传中',
+        })
+        const filePath = res.tempFilePaths[0]
+        // 上传图片
+        const cloudPath = 'new-request-image' + app.globalData.openId
+        wx.cloud.uploadFile({
+          cloudPath,
+          filePath,
+          success: res => {
+            console.log('[上传文件] 成功：', res)
+            this.setData({
+              newRequestImageUrl: filePath,
+            })
+            this.createNewRequest(app.globalData.openId, res.fileID, filePath)
+          },
+          fail: e => {
+            console.error('[上传文件] 失败：', e)
+            wx.showToast({
+              icon: 'none',
+              title: '上传失败',
+            })
+          },
+          complete: () => {
+            wx.hideLoading()
+          }
+        })
+
+      },
+      fail: e => {
+        console.error(e)
+      }
     })
   },
 

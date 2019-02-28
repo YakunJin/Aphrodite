@@ -1,1 +1,23 @@
 /* components/BidderProductItem/BidderProductItem.wxss */
+.bidder-product-container {
+  display: flex;
+  flex-direction: column;
+  border-top: 1rpx solid lightgray;
+  border-bottom: 1rpx solid lightgray;
+  margin-bottom: 10rpx;
+}
+
+.middle-section {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  font-family: Apple Chancery, cursive;
+}
+
+.bidder-product-text {
+  padding: 10rpx 20rpx 30rpx 20rpx;
+  font-size: 35rpx;
+  font-weight: lighter;
+  font-style: italic;
+  font-family: Arial, sans-serif;
+  color: lightslategray;
+}

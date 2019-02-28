@@ -4,4 +4,7 @@
       <bidder-product-item image-url="{{bidderProduct.imageUrl}}" description="{{bidderProduct.description}}" price="{{bidderProduct.price}}"></bidder-product-item>
     </view>
   </scroll-view>
+  <navigator class="upload-photo-section" url="../newRequest/newRequest" open-type="switchTab">
+  Upload
+  </navigator>
 </view>

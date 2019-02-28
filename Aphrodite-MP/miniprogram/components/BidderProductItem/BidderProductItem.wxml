@@ -1,4 +1,8 @@
 <!--components/BidderProductItem/BidderProductItem.wxml-->
-<view class="bidder-product-image" wx:if="{{!!imageUrl}}">
+<view class="bidder-product-container" wx:if="{{!!imageUrl}}">
   <image class="uploader-image" src="{{imageUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+  <view class="middle-section">
+    <text>RMB: {{price}}</text>
+  </view>
+  <text class="bidder-product-text">{{description}}</text>
 </view>
