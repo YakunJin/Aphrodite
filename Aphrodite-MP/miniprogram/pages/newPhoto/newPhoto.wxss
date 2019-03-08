@@ -30,3 +30,23 @@
   height: 615rpx;
   margin-bottom: 50rpx;
 }
+
+.photo-parameter-section {
+  position: absolute;
+  bottom: 10rpx;
+  top: 600rpx;
+  border: 1rpx solid lightgrey;
+  width: 100%;
+}
+
+.device-selection-section {
+  width: 100%;
+  height:100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.device-selection-button {
+  
+}

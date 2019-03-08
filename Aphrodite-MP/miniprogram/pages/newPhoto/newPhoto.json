@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "icon-toggle-button": "../../components/IconToggleButton/IconToggleButton"
+  }
 }

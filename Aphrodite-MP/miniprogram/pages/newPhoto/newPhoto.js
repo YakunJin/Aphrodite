@@ -17,7 +17,20 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      isUserLogin: !!app.globalData.openId
+      isUserLogin: !!app.globalData.openId,
+      deviceType: 'camera',
+    })
+  },
+
+  onSetDeviceCamera() {
+    this.setData({
+      deviceType: 'camera'
+    })
+  },
+
+  onSetDevicePhone() {
+    this.setData({
+      deviceType: 'phone'
     })
   },
 

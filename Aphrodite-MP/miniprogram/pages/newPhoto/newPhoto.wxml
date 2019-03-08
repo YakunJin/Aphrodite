@@ -8,6 +8,13 @@
     <view class="new-photo-section" wx:if="{{newPhotoUrl}}">
       <image class="uploader" src="{{newPhotoUrl}}" mode="aspectFit" bindtap="previewImg"></image>
     </view>
+    <view class="photo-parameter-section">
+      <view class="device-selection-section">
+        <icon-toggle-button class='device-selection-button' icon-url="../../icons/camera.png" toggle-on-icon-url="../../icons/camera_green.png" is-toggle-on="{{deviceType === 'camera'}}" bind:onClick="onSetDeviceCamera"></icon-toggle-button>
+      <icon-toggle-button class='device-selection-button' icon-url="../../icons/phone.png" toggle-on-icon-url="../../icons/phone_green.png" is-toggle-on="{{deviceType === 'phone'}}" bind:onClick="onSetDevicePhone"></icon-toggle-button>
+      </view>
+      
+    </view>
     <view class="new-photo-button" bindtap="doUpload">
       <text>Start</text>
     </view>
