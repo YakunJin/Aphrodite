@@ -1,0 +1,32 @@
+/* miniprogram/pages/newPhoto/newPhoto.wxss */
+.new-photo-view {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-photo-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.new-photo-button {
+  position: absolute;
+  right: 34rpx;
+  bottom: 50rpx;
+  width: 160rpx;
+  background-color: purple;
+  height: 160rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-photo-section {
+  height: 615rpx;
+  margin-bottom: 50rpx;
+}

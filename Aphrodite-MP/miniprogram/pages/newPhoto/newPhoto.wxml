@@ -1,0 +1,15 @@
+<!--miniprogram/pages/newPhoto/newPhoto.wxml-->
+<view class="new-photo-view">
+  <view wx:if="{{!isUserLogin}}">
+    <button open-type='getUserInfo' bindgetuserinfo="onGotUserInfo">先要登录哦</button>
+  </view>
+
+  <view wx:if="{{isUserLogin}}" class="new-photo-container">
+    <view class="new-photo-section" wx:if="{{newPhotoUrl}}">
+      <image class="uploader" src="{{newPhotoUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+    <view class="new-photo-button" bindtap="doUpload">
+      <text>Start</text>
+    </view>
+  </view>
+</view>
