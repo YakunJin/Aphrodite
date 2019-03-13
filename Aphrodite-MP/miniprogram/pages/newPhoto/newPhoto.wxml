@@ -6,14 +6,22 @@
 
   <view wx:if="{{isUserLogin}}" class="new-photo-container">
     <view class="new-photo-section" wx:if="{{newPhotoUrl}}">
-      <image class="uploader" src="{{newPhotoUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+      <image class="uploader" src="{{newPhotoUrl}}" mode="aspectFit" bindtap="onSelectPhoto"></image>
     </view>
     <view class="photo-parameter-section">
       <view class="device-selection-section">
         <icon-toggle-button class='device-selection-button' icon-url="../../icons/camera.png" toggle-on-icon-url="../../icons/camera_green.png" is-toggle-on="{{deviceType === 'camera'}}" bind:onClick="onSetDeviceCamera"></icon-toggle-button>
       <icon-toggle-button class='device-selection-button' icon-url="../../icons/phone.png" toggle-on-icon-url="../../icons/phone_green.png" is-toggle-on="{{deviceType === 'phone'}}" bind:onClick="onSetDevicePhone"></icon-toggle-button>
       </view>
-      
+      <view class="detail-set-section">
+        <view class="detail-set-item">
+          <icon-toggle-button class='detail-set-button' icon-url="../../icons/aperture.png" toggle-on-icon-url="../../icons/aperture_green.png" is-toggle-on="{{!!isApertureOn}}" bind:onClick="onSwithAperture">
+          </icon-toggle-button>
+            <picker class="selection-item" bindchange='onSelectAperture' value="{{selectedApertureIndex}}" range="{{apertureOptions}}">
+              <view class="selection-view">{{apertureOptions[selectedApertureIndex]}}</view>
+          </picker>
+        </view>
+      </view>
     </view>
     <view class="new-photo-button" bindtap="doUpload">
       <text>Start</text>

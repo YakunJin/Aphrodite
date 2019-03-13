@@ -10,12 +10,15 @@ Page({
   data: {
     isUserLogin: false,
     newPhotoUrl: '../../images/photo-placeholder.png',
+    isApertureOn: false,
+    apertureOptions: ["F1", "F1.4", "F2", "F2.8", "F4", "5.6", "F8", "F11", "F16", "F22", "F32", "F44", "F64"],
+    selectedApertureIndex: 0
   },
 
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.setData({
       isUserLogin: !!app.globalData.openId,
       deviceType: 'camera',
@@ -34,7 +37,7 @@ Page({
     })
   },
 
-  onGotUserInfo: function (e) {
+  onGotUserInfo: function(e) {
     // 调用云函数
     wx.cloud.callFunction({
       name: 'login',
@@ -83,54 +86,71 @@ Page({
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * Page event handler function--Called when user drop down
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
 
+  onSelectPhoto: function() {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['compressed'],
+      sourceType: ['album', 'camera'],
+      success: res => {
+        const filePath = res.tempFilePaths[0]
+        this.setData({
+          newPhotoUrl: filePath,
+        })
+      },
+      fail: e => {
+        console.error(e)
+      }
+    })
+  },
+
   // 上传图片
-  doUpload: function () {
+  doUpload: function() {
     // 选择图片
     wx.chooseImage({
       count: 1,
@@ -143,7 +163,7 @@ Page({
         const filePath = res.tempFilePaths[0]
         let timeStamp = Date.parse(new Date());
         // 上传图片
-        const cloudPath = 'new-photo-'+ timeStamp + '-' + app.globalData.openId
+        const cloudPath = 'new-photo-' + timeStamp + '-' + app.globalData.openId
         wx.cloud.uploadFile({
           cloudPath,
           filePath,
@@ -172,7 +192,7 @@ Page({
     })
   },
 
-  savePhotoInfo: function (openId, photoId, photoPath) {
+  savePhotoInfo: function(openId, photoId, photoPath) {
     wx.cloud.callFunction({
       name: 'savePhotoInfo',
       data: {
