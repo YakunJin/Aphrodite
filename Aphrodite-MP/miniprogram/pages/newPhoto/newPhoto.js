@@ -37,6 +37,12 @@ Page({
     })
   },
 
+  onSwithAperture() {
+    this.setData({
+      isApertureOn: !this.data.isApertureOn
+    })
+  },
+
   onGotUserInfo: function(e) {
     // 调用云函数
     wx.cloud.callFunction({

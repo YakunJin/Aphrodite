@@ -11,14 +11,14 @@
     <view class="photo-parameter-section">
       <view class="device-selection-section">
         <icon-toggle-button class='device-selection-button' icon-url="../../icons/camera.png" toggle-on-icon-url="../../icons/camera_green.png" is-toggle-on="{{deviceType === 'camera'}}" bind:onClick="onSetDeviceCamera"></icon-toggle-button>
-      <icon-toggle-button class='device-selection-button' icon-url="../../icons/phone.png" toggle-on-icon-url="../../icons/phone_green.png" is-toggle-on="{{deviceType === 'phone'}}" bind:onClick="onSetDevicePhone"></icon-toggle-button>
+        <icon-toggle-button class='device-selection-button' icon-url="../../icons/phone.png" toggle-on-icon-url="../../icons/phone_green.png" is-toggle-on="{{deviceType === 'phone'}}" bind:onClick="onSetDevicePhone"></icon-toggle-button>
       </view>
       <view class="detail-set-section">
         <view class="detail-set-item">
           <icon-toggle-button class='detail-set-button' icon-url="../../icons/aperture.png" toggle-on-icon-url="../../icons/aperture_green.png" is-toggle-on="{{!!isApertureOn}}" bind:onClick="onSwithAperture">
           </icon-toggle-button>
-            <picker class="selection-item" bindchange='onSelectAperture' value="{{selectedApertureIndex}}" range="{{apertureOptions}}">
-              <view class="selection-view">{{apertureOptions[selectedApertureIndex]}}</view>
+          <picker class="selection-item" bindchange='onSelectAperture' value="{{selectedApertureIndex}}" range="{{apertureOptions}}" wx:if="{{!!isApertureOn}}">
+            <view class="selection-view">{{apertureOptions[selectedApertureIndex]}}</view>
           </picker>
         </view>
       </view>
