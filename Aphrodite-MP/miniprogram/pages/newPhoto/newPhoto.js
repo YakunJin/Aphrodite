@@ -12,7 +12,13 @@ Page({
     newPhotoUrl: '../../images/photo-placeholder.png',
     isApertureOn: false,
     apertureOptions: ["F1", "F1.4", "F2", "F2.8", "F4", "5.6", "F8", "F11", "F16", "F22", "F32", "F44", "F64"],
-    selectedApertureIndex: 0
+    selectedApertureIndex: 0,
+    isISOOn: false,
+    isoOptions: ["100", "200", "400", "800", "1600", "3200", "6400", "12800"],
+    selectedISOIndex: 0,
+    isShutterOn: false,
+    shutterOptions: ["B", "1", "1/2", "1/4", "1/8", "1/15", "1/30", "1/60","1/125","1/500","1/1000"],
+    selectedShutterIndex: 0
   },
 
   /**
@@ -40,6 +46,36 @@ Page({
   onSwithAperture() {
     this.setData({
       isApertureOn: !this.data.isApertureOn
+    })
+  },
+
+  onSelectAperture(e) {
+    this.setData({
+      selectedApertureIndex: e.detail.value
+    })
+  },
+
+  onSwithISO() {
+    this.setData({
+      isISOOn: !this.data.isISOOn
+    })
+  },
+
+  onSelectISO(e) {
+    this.setData({
+      selectedISOIndex: e.detail.value
+    })
+  },
+
+  onSwithShutter() {
+    this.setData({
+      isShutterOn: !this.data.isShutterOn
+    })
+  },
+
+  onSelectShutter(e) {
+    this.setData({
+      selectedShutterIndex: e.detail.value
     })
   },
 

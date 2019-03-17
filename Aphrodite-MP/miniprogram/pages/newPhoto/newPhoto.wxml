@@ -21,6 +21,20 @@
             <view class="selection-view">{{apertureOptions[selectedApertureIndex]}}</view>
           </picker>
         </view>
+        <view class="detail-set-item">
+          <icon-toggle-button class='detail-set-button' icon-url="../../icons/iso.png" toggle-on-icon-url="../../icons/iso_green.png" is-toggle-on="{{!!isISOOn}}" bind:onClick="onSwithISO">
+          </icon-toggle-button>
+          <picker class="selection-item" bindchange='onSelectISO' value="{{selectedISOIndex}}" range="{{isoOptions}}" wx:if="{{!!isISOOn}}">
+            <view class="selection-view">{{isoOptions[selectedISOIndex]}}</view>
+          </picker>
+        </view>
+        <view class="detail-set-item">
+          <icon-toggle-button class='detail-set-button' icon-url="../../icons/shutter.png" toggle-on-icon-url="../../icons/shutter_green.png" is-toggle-on="{{!!isShutterOn}}" bind:onClick="onSwithShutter">
+          </icon-toggle-button>
+          <picker class="selection-item" bindchange='onSelectShutter' value="{{selectedShutterIndex}}" range="{{shutterOptions}}" wx:if="{{!!isShutterOn}}">
+            <view class="selection-view">{{shutterOptions[selectedShutterIndex]}}</view>
+          </picker>
+        </view>
       </view>
     </view>
     <view class="new-photo-button" bindtap="doUpload">
