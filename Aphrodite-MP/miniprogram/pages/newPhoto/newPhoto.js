@@ -17,7 +17,7 @@ Page({
     isoOptions: ["100", "200", "400", "800", "1600", "3200", "6400", "12800"],
     selectedISOIndex: 0,
     isShutterOn: false,
-    shutterOptions: ["B", "1", "1/2", "1/4", "1/8", "1/15", "1/30", "1/60","1/125","1/500","1/1000"],
+    shutterOptions: ["B", "1", "1/2", "1/4", "1/8", "1/15", "1/30", "1/60", "1/125", "1/500", "1/1000"],
     selectedShutterIndex: 0
   },
 
@@ -193,54 +193,42 @@ Page({
 
   // 上传图片
   doUpload: function() {
-    // 选择图片
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['compressed'],
-      sourceType: ['album', 'camera'],
+    wx.showLoading({
+      title: '上传中',
+    })
+    const filePath = this.data.newPhotoUrl;
+    let timeStamp = Date.parse(new Date());
+    // 上传图片
+    const cloudPath = 'new-photo-' + timeStamp + '-' + app.globalData.openId
+    wx.cloud.uploadFile({
+      cloudPath,
+      filePath,
       success: res => {
-        wx.showLoading({
-          title: '上传中',
-        })
-        const filePath = res.tempFilePaths[0]
-        let timeStamp = Date.parse(new Date());
-        // 上传图片
-        const cloudPath = 'new-photo-' + timeStamp + '-' + app.globalData.openId
-        wx.cloud.uploadFile({
-          cloudPath,
-          filePath,
-          success: res => {
-            console.log('[上传文件] 成功：', res)
-            this.setData({
-              newPhotoUrl: filePath,
-            })
-            // this.savePhotoInfo(app.globalData.openId, res.fileID, filePath)
-          },
-          fail: e => {
-            console.error('[上传文件] 失败：', e)
-            wx.showToast({
-              icon: 'none',
-              title: '上传失败',
-            })
-          },
-          complete: () => {
-            wx.hideLoading()
-          }
-        })
+        console.log('[上传文件] 成功：', res)
+        this.savePhotoInfo(app.globalData.openId, res.fileID, filePath)
+        wx.hideLoading();
       },
       fail: e => {
-        console.error(e)
-      }
+        console.error('[上传文件] 失败：', e)
+        wx.showToast({
+          icon: 'none',
+          title: '上传失败',
+        });
+        wx.hideLoading();
+      },
     })
   },
 
   savePhotoInfo: function(openId, photoId, photoPath) {
+    console.log("openId ", openId);
+    console.log("photoId ",  photoId);
+    console.log("photoPath ", photoPath);
     wx.cloud.callFunction({
       name: 'savePhotoInfo',
       data: {
         openId: openId,
-        photoId: imageId,
-        photoPath: imagePath
+        photoId: photoId,
+        photoPath: photoPath
       },
       success: res => {
         console.log('Save photo info for user ', openId)
